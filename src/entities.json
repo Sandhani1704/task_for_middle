@@ -1,4 +1,4 @@
-{
+ {
     "response": [
       {
         "type": "flat",
@@ -12,6 +12,10 @@
             "house": "3a",
             "room": "123"
           },
+          "pictures": [
+            "https://images.unsplash.com/photo-1470075801209-17f9ec0cada6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1aWxkaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            "https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          ],
           "area": 134,
           "unit": "квм"
         },
@@ -37,6 +41,10 @@
             "house": "12",
             "room": "45"
           },
+          "pictures": [
+            "https://images.unsplash.com/photo-1554435493-93422e8220c8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            "https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          ],
           "area": 34,
           "unit": "квм"
         },
@@ -62,6 +70,10 @@
             "house": "134",
             "room": "24"
           },
+          "pictures": [
+            "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+            "https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          ],
           "area": 134,
           "unit": "квм"
         },
