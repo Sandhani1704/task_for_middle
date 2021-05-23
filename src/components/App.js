@@ -19,13 +19,20 @@ function App() {
       if (parsedReviews) {
 
         const reviews = Object.values(parsedReviews);
-        const favourites = JSON.parse(localStorage.getItem('favourites'))
+        
+        let favourites
+
+        try {
+          favourites = localStorage.getItem('favourites')
+        } catch (err) {
+          console.error(err)
+        }
+        
         const result = reviews.map(el => {
-          return {...el, favourite: favourites.includes(el.id) ? true : false}
+          return {...el, favourite: favourites?.includes(el.id) ? true : false}
         })
         
         setApartments(result)
-        
       }
     })
 
@@ -50,7 +57,7 @@ function App() {
   return (
     <ApartmentsContext.Provider value={{ apartments, setApartments }}>
       <div className="App">
-        
+
         <Header />
         <ApartmentsList />
 

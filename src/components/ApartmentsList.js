@@ -7,7 +7,6 @@ function ApartmentsList() {
     const { apartments, setApartments } = React.useContext(ApartmentsContext);
 
     const handleLikeClick = (cardId) => {
-
         setApartments(apartments.map(el => el.id === cardId ? { ...el, favourite: !el.favourite } : { ...el }))
     }
 
