@@ -1,5 +1,4 @@
-import * as entities from '../path/entities.json'
-// const BASE_URL = 'http://localhost:3000';
+import * as entities from '../entities.json'
 
 export const getInitialDatas = async () => {
   return await new Promise((resolve) => {

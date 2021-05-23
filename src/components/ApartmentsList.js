@@ -1,9 +1,11 @@
 import './ApartmentsList.css';
 import React from 'react';
 import { ApartmentsContext } from '../contexts/ApartmentsContext';
+import { NextIcon } from '../assets/icons/NextIcon';
+import { BackIcon } from '../assets/icons/BackIcon';
 
 function ApartmentsList() {
-
+    
     const { apartments, setApartments } = React.useContext(ApartmentsContext);
 
     const handleLikeClick = (cardId) => {
@@ -13,24 +15,35 @@ function ApartmentsList() {
     return (
         <>
             <div className="apartments">
-                {apartments.map((home) => (
-                    <div className="apartment__card">
+                {apartments.map((homeItem) => (
+                    <div className="apartment__card" key={homeItem.id}>
                         <div className="apartment__card-pictures">
-                            {home.attributes.pictures.slice(0, 1).map((homePic) => (
-                                <img className="apartment__card-image" src={homePic} alt="apartments view" />
+                            {homeItem.attributes.pictures.slice(0, 1).map((homeImg, key) => (
+                                <img className="apartment__card-image" src={homeImg} alt="apartments view" key={key}/>
+
                             ))}
+
+                            <button className="apartment__button-next">
+                                <span className='apartment__button-controll-image'>
+                                    <NextIcon />
+                                </span>
+                            </button>
+                            <button className="apartment__button-back">
+                            <span className='apartment__button-controll-image'>
+                                    <BackIcon />
+                                </span>
+                            </button>
                         </div>
-                        <h2 className="apartment__title">{home.attributes.title}</h2>
+                        <h2 className="apartment__title">{homeItem.attributes.title}</h2>
                         <div className="apartment__card-address">
-                            <p>{home.attributes.address.city}</p>
-                            <p>, {home.attributes.address.street}</p>
-                            <p>, {home.attributes.address.house}</p>
-                            <p>, {home.attributes.address.room}</p>
+                            <p>{homeItem.attributes.address.city}</p>
+                            <p>, {homeItem.attributes.address.street}</p>
+                            <p>, {homeItem.attributes.address.house}</p>
+                            <p>, {homeItem.attributes.address.room}</p>
                         </div>
                         <div className="apartment__like-container">
-                            <button type="button" className={`apartment-like-button ${home.favourite && 'apartment-like-button_active'}`}
-                                onClick={() => { handleLikeClick(home.id) }}></button>
-                            <p className="apartment__like-count"></p>
+                            <button type="button" className={`apartment-like-button ${homeItem.favourite && 'apartment-like-button_active'}`}
+                                onClick={() => { handleLikeClick(homeItem.id) }}></button>
                         </div>
 
                     </div>
