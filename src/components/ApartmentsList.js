@@ -1,26 +1,44 @@
-import './App.css';
+import './ApartmentsList.css';
 import React from 'react';
+import { ApartmentsContext } from '../contexts/ApartmentsContext';
 
-function ApartmentsList({apartments}) {
+function ApartmentsList() {
+
+    const { apartments, setApartments } = React.useContext(ApartmentsContext);
+
+    const handleLikeClick = (cardId) => {
+
+        setApartments(apartments.map(el => el.id === cardId ? { ...el, favourite: !el.favourite } : { ...el }))
+    }
+
     return (
         <>
-           {apartments.map((home) => (
+            <div className="apartments">
+                {apartments.map((home) => (
+                    <div className="apartment__card">
+                        <div className="apartment__card-pictures">
+                            {home.attributes.pictures.slice(0, 1).map((homePic) => (
+                                <img className="apartment__card-image" src={homePic} alt="apartments view" />
+                            ))}
+                        </div>
+                        <h2 className="apartment__title">{home.attributes.title}</h2>
+                        <div className="apartment__card-address">
+                            <p>{home.attributes.address.city}</p>
+                            <p>, {home.attributes.address.street}</p>
+                            <p>, {home.attributes.address.house}</p>
+                            <p>, {home.attributes.address.room}</p>
+                        </div>
+                        <div className="apartment__like-container">
+                            <button type="button" className={`apartment-like-button ${home.favourite && 'apartment-like-button_active'}`}
+                                onClick={() => { handleLikeClick(home.id) }}></button>
+                            <p className="apartment__like-count"></p>
+                        </div>
 
-           
-           <div className="apartments">
-                <div className="apartment__card"><img className="apartment__card-image"
-                    src="#"
-                    alt="apartments view" />
-                    <div className="ApartmentCard_rating__1MPks">Rating: <span>⭐</span><span>⭐</span><span>⭐</span></div>
-                    <h2>{home.title}</h2>
-                    <p>Debitis similique unde et eligendi sapiente in iure blanditiis distinctio.
-                    Cum nihil temporibus qui quam aut. Nesciunt qui eveniet eum quam voluptate numquam.
-              </p>
-                    <button type="button" className="button">Like apartment</button>
-                </div>
+                    </div>
 
-            </div> 
-            ))}
+
+                ))}
+            </div>
         </>
     );
 
