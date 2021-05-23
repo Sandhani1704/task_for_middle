@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/task_for_middle/static/css/main.7a4655cd.chunk.css",
+    "main.js": "/task_for_middle/static/js/main.306cdba4.chunk.js",
+    "main.js.map": "/task_for_middle/static/js/main.306cdba4.chunk.js.map",
+    "runtime-main.js": "/task_for_middle/static/js/runtime-main.bc9ac04c.js",
+    "runtime-main.js.map": "/task_for_middle/static/js/runtime-main.bc9ac04c.js.map",
+    "static/js/2.472a5057.chunk.js": "/task_for_middle/static/js/2.472a5057.chunk.js",
+    "static/js/2.472a5057.chunk.js.map": "/task_for_middle/static/js/2.472a5057.chunk.js.map",
+    "static/js/3.daa4c187.chunk.js": "/task_for_middle/static/js/3.daa4c187.chunk.js",
+    "static/js/3.daa4c187.chunk.js.map": "/task_for_middle/static/js/3.daa4c187.chunk.js.map",
+    "index.html": "/task_for_middle/index.html",
+    "static/css/main.7a4655cd.chunk.css.map": "/task_for_middle/static/css/main.7a4655cd.chunk.css.map",
+    "static/js/2.472a5057.chunk.js.LICENSE.txt": "/task_for_middle/static/js/2.472a5057.chunk.js.LICENSE.txt",
+    "static/media/ApartmentsList.css": "/task_for_middle/static/media/like-button_active.032660ef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc9ac04c.js",
+    "static/js/2.472a5057.chunk.js",
+    "static/css/main.7a4655cd.chunk.css",
+    "static/js/main.306cdba4.chunk.js"
+  ]
+}
