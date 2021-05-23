@@ -1,37 +1,38 @@
 import './App.css';
 import React from 'react';
 import { getInitialDatas } from '../utils/Api';
-import BASE_URL from '../entities.json'
-// const entities = require('../entities.json');
+import ApartmentsList from './ApartmentsList'
 
 function App() {
-  const [cards, setCards] = React.useState({});
+  const [apartments, setApartments] = React.useState({});
   const [preloader, setPreloader] = React.useState(false);
-  console.log(BASE_URL)
+
 
   React.useEffect(() => {
     setPreloader(true);
 
-    // setTimeout(() => {
-      getInitialDatas({BASE_URL}).then((res) => {
-        if (res) {
+    getInitialDatas().then((res) => {
+      return res;
+      // console.log(res)
+    }).then((parsedReviews) => {
+      if (parsedReviews) {
+      // we're formatting the data and using setData() to update our state
+      console.log(parsedReviews)
+      const reviews = Object.values(parsedReviews);
+      setApartments(reviews);
+    }
+    })
 
-          setCards(JSON.parse(res))
-          console.log(cards)
-
-          setPreloader(false);
-
-        }
-
-      })
-    // }, 500)
   }, []);
+
+  
 
   return (
     <div className="App">
       <header className="App-header">
 
       </header>
+      <ApartmentsList apartments={apartments}/>
 
     </div>
   );
